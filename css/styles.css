@@ -86,7 +86,7 @@ img {
    3. Layout & Backgrounds
    ========================================= */
 .main-wraper {
-    background: url(../slbg.webp);
+    background: url(../images/bg/slbg.webp);
     aspect-ratio: 16 / 9;
     background-size: cover;
     background-repeat: no-repeat;
@@ -1524,4 +1524,5 @@ img {
     .footer__bottom { gap: 6px; }
     .footer__bottom p { font-size: 10px; }
     .footer__bottom ul li a { font-size: 10px; }
+
 }
