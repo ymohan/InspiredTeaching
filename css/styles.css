@@ -274,25 +274,10 @@ img {
 }
 
 /* Language Toggle */
-.lang-toggle {
-    display: inline-flex;
-    gap: 0.25rem;
-}
+.lang-toggle { display:inline-flex; gap:.25rem; }
+.lang-toggle .lang-btn { padding:.35rem .6rem; border-radius:6px; border:1px solid rgba(0,0,0,.06); background:white; cursor:pointer; font-weight:600; }
+.lang-toggle .lang-btn.active { background: #111; color:#fff; border-color:#111; }
 
-.lang-toggle .lang-btn {
-    padding: 0.35rem 0.6rem;
-    border-radius: 6px;
-    border: 1px solid rgba(0,0,0,0.06);
-    background: white;
-    cursor: pointer;
-    font-weight: 600;
-}
-
-.lang-toggle .lang-btn.active {
-    background: #111;
-    color: #fff;
-    border-color: #111;
-}
 
 /* =========================================
    5. Mobile Menu
@@ -1526,3 +1511,4 @@ img {
     .footer__bottom ul li a { font-size: 10px; }
 
 }
+
