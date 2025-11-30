@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Inspired Teaching</title>
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css" integrity="sha512-Ez0cGzNzHR1tYAv56860NLspgUGuQw16GiOOp/I2LuTmpSK9xDXlgJz3XN4cnpXWDmkNBKXR/VDMTCnAaEooxA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/mediaelement@latest/build/mediaelementplayer.min.css" rel="stylesheet">
+    <link rel="apple-touch-icon" href="images/favicon.png">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	<style>
+
+</style>
+</head>
+<body>
+	<main class="main-wraper">
+		<!-- Header -->
+		<header class="header fixed-top">
+			<div class="container">
+				<div class="row align-items-center justify-content-between py-2">
+					
+					<div class="col-auto">
+						<div class="logo">
+							<h2 class="m-0"><a href="#" class="brand-logo">Inspired Teaching</a></h2>
+						</div>
+					</div>
+
+					<div class="col d-none d-lg-flex justify-content-center">
+						<nav class="header-nav d-flex gap-4" aria-label="Main navigation">
+							<a href="#storyGrid" class="nav-link-custom">Story Telling</a>
+							<a href="#songsGrid" class="nav-link-custom">Songs</a>
+						</nav>
+					</div>
+
+					<div class="col-auto d-flex align-items-center gap-3">
+						
+						<form id="searchForm" class="search-modern d-none d-md-block" onsubmit="return false;">
+							<i class="fas fa-search search-icon"></i>
+							<input id="searchInput" type="search" placeholder="Search stories..." aria-label="Search">
+						</form>
+
+						<div class="header-btn d-none d-sm-block">
+							<a href="https://languageresearchlab.in/contact.php" target="_blank" class="btn-contact-modern">
+								Contact Us
+							</a>
+						</div>
+
+						<div class="mobile-toggle d-lg-none">
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</header>
+		<!--Mobile-Menu-->
+		<div class="mobile-menu">
+			<div class="mobile-close"></div>
+			<ul class="mobile-nav-menu">
+				<li class="mobile-nav-item"><a href="#" class="mobile-nav-link">Home</a></li>
+				<li class="mobile-nav-item"><a href="#storyGrid" class="mobile-nav-link">Story</a></li>
+				<li class="mobile-nav-item"><a href="#songsGrid" class="mobile-nav-link">Songs</a></li>		
+				<li class="mobile-nav-item"><a href="https://languageresearchlab.in/contact.php" target="_blank" class="mobile-nav-link">Contact</a></li>				
+			</ul>
+		</div>
+
+		<!-- banner -->
+		<section class="playlist-banner pb-5">
+            <img src="it.webp" alt="" class="large-image">
+            <div class="content banner-text">
+                <h1 class="fw-700 white mb-12"> Inpired Teaching </h1>
+            </div>
+        </section>
+            <!-- Audio grid -->
+		<section id="storyGrid" class="audio-grid pt-5">
+			<div class="container">
+				<div class="grid-heading">
+					<h2>Story Telling - Audio</h2>
+				</div>
+				<div class="popular-wrapper cards-grid" id="stories-container"></div>
+				
+				<div id="storyLoadMoreWrap" class="load-more-wrap">
+					<button id="storyLoadMore" class="btn-load">Load more</button>
+				</div>
+			</div>
+		</section>
+
+		<section id="songsGrid" class="audio-grid pb-5">
+			<div class="container">
+				<div class="grid-heading">
+					<h2>Songs - Audio</h2>
+				</div>
+				<div class="popular-wrapper cards-grid" id="songs-container"></div>
+			</div>
+		</section>
+		<!-- Footer  -->
+        <footer class="footer__section pl-24 pr-24">
+            <div class="container">
+              <div class="footer__top">
+                 <div class="row g-4">
+                    <div class="col-lg-4 col-md-6 col-sm-6 quick__space">
+                        <div class="footer__widget">
+							<h4 class="white mb-5">
+								Quick Link
+							</h4>
+							<div class="link__attach d-flex">
+								<ul class="link">
+									<li class="mb-16">
+									   <a href="https://www.languageresearchlab.in/about.html" target="_blank" rel="noopener noreferrer" class="fs-16 fw-400 bodyfont pra">
+										   About
+										</a>
+									</li>
+									<li class="mb-16">
+									   <a href="#storyGrid" class="fs-16 fw-400 bodyfont pra">
+										 Story Telling
+									   </a>
+									</li>
+									<li>
+									   <a href="#songsGrid" class="fs-16 fw-400 bodyfont pra">
+										  Songs
+									   </a>
+									</li>
+								</ul>
+								<ul class="link">
+									<li class="mb-16">
+									   <a href="https://www.languageresearchlab.in/index.html" target="_blank" rel="noopener noreferrer" class="fs-16 fw-400 bodyfont pra">
+										   Language Research Lab
+										</a>
+									</li>
+									<li class="mb-16">
+									   <a href="#" class="fs-16 fw-400 bodyfont pra">
+										  Podcasts
+									   </a>
+									</li>
+									<li>
+									   <a href="https://languageresearchlab.in/cala/index.php" target="_blank" rel="noopener noreferrer" class="fs-16 fw-400 bodyfont pra">
+										  Blog
+										</a>
+									</li>
+								</ul>
+							</div>
+							<ul class="social d-flex align-items-center">
+								<li>
+									<a href="javascript:void(0)">
+									   <i class="fa-brands fa-facebook"></i>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0)">
+									   <i class="fa-brands fa-google"></i>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0)">
+									   <i class="fa-brands fa-youtube"></i>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0)">
+									   <i class="fa-brands fa-twitter"></i>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0)">
+									   <i class="fa-brands fa-linkedin"></i>
+									</a>
+								</li>
+							</ul>						  
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 footer__streamio">
+                      <div class="footer__widget text-center">
+                          <h4 class="white mb-5">
+                             Curious minds start here
+                          </h4>
+                          <a href="index.html" class="d-block mb-3">
+                             <img src="images/favicon.png" alt="img" class="mb-3">
+                             <h3 class="white-head">
+                                Inspired Teaching
+                             </h3>
+                          </a>
+                          <h5 class="white-head">
+                             Play ... Listen ... Grow ...
+                          </h5>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 footercontact__link">
+                        <div class="footer__widget">
+                            <h4 class="white mb-5">
+								Contact
+                            </h4>
+						    <div class="link__attach">
+								<p>  Alankuppam,<br>Auroville, <br> puducherry, Tamilnadu. 605101 </p>							
+								<p> IN: +91 7386431032,<br> rajaraghu@gmail.com </p>								  
+							</div>							
+                        </div>
+                    </div>
+                 </div>
+              </div>
+              <div class="footer__bottom d-flex align-items-center">
+                 <p class="pra fs-14 fw-400 bodyfont">
+                    Copyright &copy; Inspired Teaching 
+                 </p>
+                 <ul class="privacy d-flex align-items-center gap-4">
+                    <li>
+                       <a href="#" class="fs-14 fw-400 bodyfont white-head">
+                          Privacy
+                       </a>
+                    </li>
+                    <li>
+                       <a href="#" class="fs-14 fw-400 bodyfont white-head">
+                          Terms & Conditions
+                       </a>
+                    </li>
+                 </ul>
+              </div>
+           </div>
+        </footer>
+		<!-- Footer  -->
+	</main>
+
+	<!-- Scroll to top button -->
+    <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Scroll to top" title="Back to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+			
+
+
+<script src="js/main.js"></script>
+<script src="js/audio.js"></script>
+<!-- keep your existing inline scripts for search/load-more/scrollTop etc. (unchanged) -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. SELECTORS
+    const storyGrid = document.getElementById('storyGrid');
+    const songsGrid = document.getElementById('songsGrid');
+    const searchInput = document.getElementById('searchInput');
+    const loadMoreWraps = document.querySelectorAll('.load-more-wrap');
+    
+    // --- CREATE PROFESSIONAL NO RESULTS MESSAGE ---
+    const noResults = document.createElement('div');
+    noResults.id = 'noResultsMessage';
+    noResults.style.display = 'none'; // Hidden by default
+    noResults.innerHTML = `
+        <div class="text-center py-5">
+            <i class="fas fa-search mb-3" style="font-size: 3rem; color: #dee2e6;"></i>
+            <h4 style="color: #495057; font-family: 'Poppins', sans-serif; font-weight: 600;">No matches found</h4>
+            <p style="color: #6c757d; font-size: 0.95rem;">
+                We couldn't find any stories or songs matching your search.<br>
+                Try checking for typos or using a different keyword.
+            </p>
+        </div>
+    `;
+    
+    // Insert it after the Songs Grid section so it appears at the bottom if everything is hidden
+    if(songsGrid) {
+        songsGrid.closest('section').parentNode.insertBefore(noResults, songsGrid.closest('section').nextSibling);
+    }
+
+    // 2. HELPER: Initial Load More Logic
+    function initializeGridState(grid) {
+        if (!grid) return;
+        const cards = Array.from(grid.querySelectorAll('.story-card')); 
+        const wrap = grid.closest('section').querySelector('.load-more-wrap');
+        const btn = wrap ? wrap.querySelector('button') : null;
+
+        // Reset all highlights and visibility
+        cards.forEach(card => {
+            card.querySelectorAll('mark').forEach(m => m.replaceWith(m.textContent));
+            card.style.display = ''; 
+            card.classList.remove('card-hidden');
+        });
+
+        // Apply "Show only 8" rule
+        if (cards.length > 8) {
+            cards.forEach((c, i) => {
+                if (i > 7) {
+                    c.style.display = 'none';
+                    c.classList.add('card-hidden');
+                }
+            });
+            if (wrap) wrap.style.display = 'block';
+            if (btn) btn.textContent = 'Load more';
+        } else {
+            if (wrap) wrap.style.display = 'none';
+        }
+    }
+
+    // 3. SETUP LOAD MORE BUTTONS
+    function attachLoadMoreListeners(grid, wrapId) {
+        const wrap = document.getElementById(wrapId);
+        if (!wrap) return;
+        const btn = wrap.querySelector('button');
+
+        // Clone to remove old listeners
+        const newBtn = btn.cloneNode(true);
+        btn.parentNode.replaceChild(newBtn, btn);
+
+        newBtn.addEventListener('click', () => {
+            const cards = Array.from(grid.querySelectorAll('.story-card'));
+            const isExpanded = newBtn.textContent === 'Show less';
+
+            if (!isExpanded) {
+                // EXPAND
+                cards.forEach(c => {
+                    c.style.display = 'flex';
+                    setTimeout(() => c.classList.remove('card-hidden'), 10);
+                });
+                newBtn.textContent = 'Show less';
+            } else {
+                // COLLAPSE
+                cards.forEach((c, i) => {
+                    if (i > 7) {
+                        c.classList.add('card-hidden');
+                        c.style.display = 'none';
+                    }
+                });
+                newBtn.textContent = 'Load more';
+                
+                const offset = grid.getBoundingClientRect().top + window.scrollY - 80;
+                window.scrollTo({ top: offset, behavior: 'smooth' });
+            }
+        });
+    }
+
+    // 4. MAIN INIT FUNCTION
+    function initAll() {
+        initializeGridState(storyGrid);
+        initializeGridState(songsGrid);
+        attachLoadMoreListeners(storyGrid, 'storyLoadMoreWrap');
+        attachLoadMoreListeners(songsGrid, 'songsLoadMoreWrap');
+        noResults.style.display = 'none'; // Ensure error is hidden on reset
+    }
+
+    // Listen for custom event from audio.js
+    window.addEventListener('audioCardsRendered', initAll);
+    
+    // Fallback in case audio.js ran fast
+    if (document.querySelectorAll('.story-card').length > 0) {
+        initAll();
+    }
+
+    // 5. SEARCH FUNCTION
+    function applySearch() {
+        const qRaw = searchInput.value.trim().toLowerCase();
+        const allCards = document.querySelectorAll('.story-card'); 
+
+        // CASE: Search Cleared
+        if (!qRaw) {
+            initAll(); 
+            // Explicitly show the Section Titles again if you want (optional, but good UX)
+            return;
+        }
+
+        // CASE: Active Search
+        loadMoreWraps.forEach(w => w.style.display = 'none');
+
+        let matchCount = 0;
+
+        allCards.forEach(card => {
+            // Remove old marks
+            card.querySelectorAll('mark').forEach(m => m.replaceWith(m.textContent));
+
+            const searchText = (card.dataset.search || '').toLowerCase();
+            const isMatch = searchText.includes(qRaw);
+
+            if (isMatch) {
+                card.style.display = 'flex';
+                card.classList.remove('card-hidden');
+                matchCount++;
+
+                // Highlight Logic
+                const titleEl = card.querySelector('.story-title');
+                if (titleEl) {
+                    const text = titleEl.textContent;
+                    const idx = text.toLowerCase().indexOf(qRaw);
+                    if (idx !== -1) {
+                        const before = text.slice(0, idx);
+                        const match = text.slice(idx, idx + qRaw.length);
+                        const after = text.slice(idx + qRaw.length);
+                        titleEl.innerHTML = `${before}<mark class="highlight">${match}</mark>${after}`;
+                    }
+                }
+            } else {
+                card.style.display = 'none';
+            }
+        });
+
+        // Toggle Professional Message
+        noResults.style.display = (matchCount === 0) ? 'block' : 'none';
+    }
+
+    if(searchInput) {
+        searchInput.addEventListener('input', applySearch);
+    }
+    
+    const searchForm = document.getElementById('searchForm');
+    if(searchForm) {
+        searchForm.addEventListener('submit', (e) => e.preventDefault());
+    }
+});
+</script>
+
+<!-- NEW: Save selected track and open details page (vtt1.html) -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  document.body.addEventListener('click', (e) => {
+    const card = e.target.closest('.track-list');
+    if (!card) return;
+    e.preventDefault();
+
+    const audioPath = card.dataset.track || '';
+    if (!audioPath) return console.warn('No data-track found');
+
+    // Helper to extract category and filename from path
+    // e.g., "audio/stories/1.mp3" -> category: "stories", filename: "1"
+    const parsePath = (path) => {
+        const parts = path.split('/');
+        const fileWithExt = parts.pop(); // "1.mp3"
+        const category = parts.pop();    // "stories" or "songs"
+        const name = fileWithExt.substring(0, fileWithExt.lastIndexOf('.')); // "1"
+        return { category, name, fileWithExt };
+    };
+
+    // Build playlist
+    const allTrackEls = Array.from(document.querySelectorAll('.track-list'));
+    const playlist = allTrackEls.map(el => {
+      const path = el.dataset.track || '';
+      const info = parsePath(path);
+      return {
+        track: path,
+        title: el.dataset.title || el.querySelector('.fw-500')?.textContent?.trim() || '',
+        poster: el.dataset.poster || 'mu.png',
+        singer: el.dataset.singer || '',
+        // Dynamic path for VTT based on audio folder structure
+        transcript: `subtitles/${info.category}/${info.name}.vtt`,
+        category: info.category,
+        filename: info.name
+      };
+    });
+
+    // Current selection
+    const currentInfo = parsePath(audioPath);
+    const payload = {
+      track: audioPath,
+      poster: card.dataset.poster || 'mu.png',
+      title: card.dataset.title || card.querySelector('.fw-500')?.textContent.trim() || 'Unknown',
+      singer: card.dataset.singer || '',
+      transcript: `subtitles/${currentInfo.category}/${currentInfo.name}.vtt`,
+      category: currentInfo.category, // e.g. "stories"
+      filename: currentInfo.name,     // e.g. "1"
+      timestamp: Date.now(),
+      list: playlist
+    };
+
+    try {
+      localStorage.setItem('selectedTrack', JSON.stringify(payload));
+      localStorage.setItem('playlist', JSON.stringify(playlist));
+    } catch (err) {
+      console.warn('Failed to store playlist', err);
+    }
+
+    location.href = 'vtt1.html';
+  });
+});
+</script>
+<script>
+  // scroll-to-top script (unchanged)
+document.addEventListener('DOMContentLoaded', () => {
+  const btn = document.getElementById('scrollTopBtn');
+  if (!btn) return;
+  const root = document.documentElement;
+  const threshold = 400;
+  const toggleVisibility = () => {
+    const scrolled = root.scrollTop;
+    btn.classList.toggle('visible', scrolled > threshold);
+  };
+  btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(() => { toggleVisibility(); ticking = false; });
+      ticking = true;
+    }
+  });
+  toggleVisibility();
+});
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.min.js" integrity="sha512-EKWWs1ZcA2ZY9lbLISPz8aGR2+L7JVYqBAYTq5AXgBkSjRSuQEGqWx8R1zAX16KdXPaCjOCaKE8MCpU0wcHlHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>
