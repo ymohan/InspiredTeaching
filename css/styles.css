@@ -105,7 +105,7 @@ img {
     content: "";
     width: 96%;
     height: 30rem;
-    background: url(slbg.webp);
+    background: url(../images/bg/slbg.webp);
     aspect-ratio: 16 / 9;
     background-size: cover;
     background-repeat: no-repeat;
@@ -1544,6 +1544,7 @@ img {
     .footer__bottom ul li a { font-size: 10px; }
 
 }
+
 
 
 
