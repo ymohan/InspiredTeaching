@@ -808,7 +808,7 @@ img {
     bottom: 0;
     left: 0;
     right: 0;
-    background: #f5f6e7;
+    background: #fff9ec;
     padding: 20px;
     display: flex;
     align-items: center;
@@ -1544,6 +1544,7 @@ img {
     .footer__bottom ul li a { font-size: 10px; }
 
 }
+
 
 
 
