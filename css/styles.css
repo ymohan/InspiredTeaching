@@ -1082,7 +1082,7 @@ img {
 .white {
     color: #451d00;    
     font-family: "Caveat", serif;
-    font-size: clamp(2.5rem, 2vw + 2rem, 2.5rem);
+    font-size: clamp(1.5rem, 2vw + 2rem, 2rem);
     font-weight: 600;
     margin-bottom: 30px;
     padding-bottom: 1rem;
@@ -1544,6 +1544,7 @@ img {
     .footer__bottom ul li a { font-size: 10px; }
 
 }
+
 
 
 
