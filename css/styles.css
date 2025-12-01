@@ -1102,7 +1102,7 @@ img {
 .footer__widget .link__attach {
     gap: 64px;
     font-family: "Caveat", serif;
-    font-size: clamp(1.5rem, 2vw + 1.5rem, 1.8rem);
+    font-size: clamp(1.2rem, 2vw + 1.5rem, 1.5rem);
 }
 
 .footer__form { margin-top: 60px; }
@@ -1562,4 +1562,5 @@ img {
     .footer__bottom { gap: 6px; }
     .footer__bottom p { font-size: 10px; }
     .footer__bottom ul li a { font-size: 10px; }
+
 }
